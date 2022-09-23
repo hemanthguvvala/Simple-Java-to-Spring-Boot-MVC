@@ -5,15 +5,17 @@ public class Person {
 	private String lastName;
 	private String gender;
 	private int age;
+	private int personNumber;
 
 	public Person() {
 	}
 
-	public Person(String firstName, String lastName, String gender, int age) {
+	public Person(String firstName, String lastName, String gender, int age, int personNumber) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.gender = gender;
+		this.personNumber = personNumber;
 		this.age = age;
 	}
 
@@ -49,11 +51,20 @@ public class Person {
 		this.age = age;
 	}
 
+	public int getPersonNumber() {
+		return personNumber;
+	}
+
+	public void setPersonNumber(int personNumber) {
+		this.personNumber = personNumber;
+	}
+
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
 		builder.append("Person [firstName=").append(firstName).append(", lastName=").append(lastName)
-				.append(", gender=").append(gender).append(", age=").append(age).append("]");
+				.append(", gender=").append(gender).append(", age=").append(age).append(", personNumber=")
+				.append(personNumber).append("]");
 		return builder.toString();
 	}
 
